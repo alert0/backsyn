@@ -1,0 +1,9 @@
+{
+  "TargetPath":"d:/filebak",
+  "BackPath":["F:/web/backsyn"],
+  "FtpIp" : "www.xxx.com:1414",
+  "FtpUserName": "back",
+  "FtpPassWord": "xxx",
+  "OracleBakPath": "d:/oraclebak",
+  "OracleURL": "newhzt@xxx@orcl"
+}

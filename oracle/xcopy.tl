@@ -1,0 +1,1 @@
+xcopy  {{.src}} {{.tag}} /s /e /d:{{.time}}
