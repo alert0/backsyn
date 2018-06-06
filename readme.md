@@ -4,7 +4,7 @@
   "BackPath":["D:/newhztfiles","d:/oraclebak","D:/newhzt/tomcat/webapps/ROOT/src","D:/newhzt/tomcat/webapps/ROOT/WEB-INF/lib"],
   "FtpIp" : "xxxx:1414",
   "FtpUserName": "back",
-  "FtpPassWord": "qwerty123",
+  "FtpPassWord": "ssss",
   "OracleBakPath": "d:/oraclebak",
   "OracleURL": "newhzt@xxxx@orcl"
 }
