@@ -68,6 +68,7 @@ func main() {
 
 	//
 	//log.Println("文件目录： " + dir2 )
+
 	//
 
 	info, err := readBackInfoContent()
@@ -82,18 +83,29 @@ func main() {
 		initbak(info)
 	}
 
-	BakOracleBat(info.OracleBakPath)
+	cmd := os.Args[1]
 
-	BakFiles(info)
+	log.Println("cmd " + cmd)
+
+	switch cmd {
+	case "o":
+		BakOracleBat(info.OracleBakPath)
+	case "f":
+		BakFiles(info)
+	default:
+		//log.Println("删除指纹文件错误文件内容错误： " + err.Error())
+		BakOracleBat(info.OracleBakPath)
+		BakFiles(info)
+	}
 
 	os.Exit(0)
 
 }
+
 //
 func initHashfile() error {
 
 	t := time.Now()
-
 
 	if 1 == t.Day() { //第一天
 		err := os.Remove(hashFileName) //删除文件test.txt
@@ -114,12 +126,10 @@ func initbak(info Backinfo) error {
 
 	OracleBakPath := strings.Replace(info.OracleBakPath, "/", "\\", -1)
 
-
 	var err = TemplateSaveFile(ORACLEBAKSQLPATHTL, ORACLEBAKSQLPATH, OracleBakPath)
 	if err != nil {
 		log.Println("生成oracledir.sql 失败" + err.Error())
 	}
-
 
 	dir, err1 := getCurrentDirectory()
 
@@ -130,7 +140,7 @@ func initbak(info Backinfo) error {
 	//fmt.Println("ssssssssssss" + dir)
 
 	oracledir := map[string]string{
-		"Dir": dir,
+		"Dir":           dir,
 		"OracleBakPath": OracleBakPath,
 	}
 
@@ -158,7 +168,6 @@ func initbak(info Backinfo) error {
 	if err != nil {
 		log.Println("生成oracle.bat 失败" + err.Error())
 	}
-
 
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	baktime := fmt.Sprintf("0%d:%d%d", r.Intn(6), r.Intn(5), r.Intn(9))
@@ -199,8 +208,7 @@ func BakOracleBat(oraclepath string) error {
 		return err
 	}
 
-
-	if !checkFileIsExist(filepath.Join(dir,oraclepath) ) {
+	if !checkFileIsExist(filepath.Join(dir, oraclepath)) {
 		err := execu(ORACLEBAKPATH)
 		if err != nil {
 			log.Println("运行文件失败" + ORACLEBAKPATH + err.Error())
@@ -208,7 +216,7 @@ func BakOracleBat(oraclepath string) error {
 		}
 	}
 
-	 err = execu(ORACLEBAKBATPATH)
+	err = execu(ORACLEBAKBATPATH)
 	if err != nil {
 		log.Println("运行文件失败" + ORACLEBAKBATPATH + err.Error())
 		return err
@@ -219,23 +227,21 @@ func BakOracleBat(oraclepath string) error {
 
 func BakFiles(info Backinfo) error {
 
-
-	var xcplasttime = time.Now().AddDate(0,0,-1).Format("01-02-2006")
+	var xcplasttime = time.Now().AddDate(0, 0, -1).Format("01-02-2006")
 
 	var lasttime = time.Now().Format("2006-01-02")
 
 	var lastmoth = time.Now().Format("2006-01")
 
-
 	if !checkFileIsExist(hashFileName) {
-			if err := createHashFile(); err != nil {
-				log.Println("读取指纹文件错误文件内容错误： " + err.Error())
-				//return err
-			}
+		if err := createHashFile(); err != nil {
+			log.Println("读取指纹文件错误文件内容错误： " + err.Error())
+			//return err
+		}
 		xcplasttime = "01-02-2006"
 	}
 
-	if err := tarpath(info,lasttime, xcplasttime); err != nil {
+	if err := tarpath(info, lasttime, xcplasttime); err != nil {
 		log.Println("复制文件失败" + err.Error())
 	}
 
@@ -252,10 +258,9 @@ func BakFiles(info Backinfo) error {
 			continue
 		} else {
 			fmt.Println(file.Name())
-			ftpUploadFile(info.FtpIp, info.FtpUserName, info.FtpPassWord,filepath.Join(info.TargetPath, file.Name() ) , remoteSavePath, oracledatatmp[0]+file.Name())
+			ftpUploadFile(info.FtpIp, info.FtpUserName, info.FtpPassWord, filepath.Join(info.TargetPath, file.Name()), remoteSavePath, oracledatatmp[0]+file.Name())
 		}
 	}
-
 
 	//var localFile = filepath.Join(info.TargetPath, lasttime+".7z")
 	//
@@ -275,13 +280,9 @@ func BakFiles(info Backinfo) error {
 	os.RemoveAll(info.TargetPath)
 
 	//return err
-	return  nil
+	return nil
 
 }
-
-
-
-
 
 //读取back.json的配置文件
 func readBackInfoContent() (Backinfo, error) {
@@ -316,6 +317,7 @@ func readBackInfoContent() (Backinfo, error) {
 	return backinfo, err
 
 }
+
 //
 //创建指纹文件
 func createHashFile() error {
@@ -407,30 +409,30 @@ func tarpath(backinfo Backinfo, lasttime, time string) error {
 		//filepath.Walk(value, func(path string, f os.FileInfo, err error) error {
 		//
 
-			var err =xcopy(value,backinfo.TargetPath +"/"+lasttime+"/", time )
-			if err != nil {
-				return  err
-			}
-			log.Println("执行xcopy： " + value + backinfo.TargetPath +"/"+lasttime+"/")
-			//var partPath, _ = filepath.Rel(value, path)
-			//
-			//var targetPath = filepath.Join(backinfo.TargetPath, time, partPath)
-			//
-			////path:原始文件地址，targetPath:备份文件地址
-			////每个path都需要去比对md5文件中做比对，判断文件是否被修改过
-			////如果文件是个目录则不写入指纹文件
-			//if f.IsDir() {
-			//	copyFile(path, targetPath)
-			//} else {
-			//	md5 := makeFileMd5(path) //获取文件md5
-			//	isUpdate := comparedFileMd5(hashMapContent, md5, path)
-			//	//如果修改过则复制文件，并更新md5文件
-			//	if isUpdate {
-			//		copyFile(path, targetPath)
-			//	}
-			//	//如果没有修改过则不执行任何操作
-			//}
-			//return nil
+		var err = xcopy(value, backinfo.TargetPath+"/"+lasttime+"/", time)
+		if err != nil {
+			return err
+		}
+		log.Println("执行xcopy： " + value + backinfo.TargetPath + "/" + lasttime + "/")
+		//var partPath, _ = filepath.Rel(value, path)
+		//
+		//var targetPath = filepath.Join(backinfo.TargetPath, time, partPath)
+		//
+		////path:原始文件地址，targetPath:备份文件地址
+		////每个path都需要去比对md5文件中做比对，判断文件是否被修改过
+		////如果文件是个目录则不写入指纹文件
+		//if f.IsDir() {
+		//	copyFile(path, targetPath)
+		//} else {
+		//	md5 := makeFileMd5(path) //获取文件md5
+		//	isUpdate := comparedFileMd5(hashMapContent, md5, path)
+		//	//如果修改过则复制文件，并更新md5文件
+		//	if isUpdate {
+		//		copyFile(path, targetPath)
+		//	}
+		//	//如果没有修改过则不执行任何操作
+		//}
+		//return nil
 		//})
 	}
 
@@ -470,6 +472,7 @@ func zipfiles(targetPath string, time string) error {
 
 	return nil
 }
+
 //
 //func copyFile(basePath, targetPath string) {
 //	defer func() {
@@ -659,7 +662,7 @@ func zipfiles(targetPath string, time string) error {
 
 //调用7zip压缩
 func compress7zip(frm, dst string) error {
-	cmd := exec.Command("7z/7z.exe", "a" ,"-mx=1","-v5m",dst, frm,  )
+	cmd := exec.Command("7z/7z.exe", "a", "-mx=1", "-v5g", dst, frm)
 	//cmd.Args = []string{"a",dst,frm};
 	//cmd.Stdin = strings.NewReader("some input")
 	var out bytes.Buffer
@@ -670,17 +673,16 @@ func compress7zip(frm, dst string) error {
 		//log.Fatal(err)
 		return err
 	}
-	fmt.Printf("in all caps: %q\n", out.String() )
+	fmt.Printf("in all caps: %q\n", out.String())
 	return nil
 }
 
-
 //调用7zip压缩
-func xcopy(frm, dst,time string,) error {
+func xcopy(frm, dst, time string) error {
 
 	frm = strings.Replace(frm, "/", "\\", -1)
 	dst = strings.Replace(dst, "/", "\\", -1)
-	cmd := exec.Command("xcopy" ,  frm , dst, "/s","/e","/y","/d:"+time)
+	cmd := exec.Command("xcopy", frm, dst, "/s", "/e", "/y", "/d:"+time)
 	//cmd.Args = []string{"a",dst,frm};
 	//cmd.Stdin = strings.NewReader("some input")
 	//var out bytes.Buffer
@@ -694,8 +696,6 @@ func xcopy(frm, dst,time string,) error {
 	//fmt.Printf("in all caps: %q\n", out.String())
 	return nil
 }
-
-
 
 func execu(name string) error {
 
@@ -718,6 +718,7 @@ func execu(name string) error {
 	//fmt.Println("Result: " + out.String())
 	return nil
 }
+
 //
 //// 参数frm可以是文件或目录，不会给dst添加.zip扩展名
 //func compress(frm, dst string) error {
@@ -831,13 +832,13 @@ func ftpUploadFile(ftpserver, ftpuser, pw, localFile, remoteSavePath, saveName s
 
 	ftp.Quit()
 
-	fmt.Println("success upload file:", localFile)
+	log.Println("success upload file:", localFile)
 
 	return err
 }
 
 func get_external() string {
-	data := "";
+	data := ""
 	resp, err := http.Get("http://myexternalip.com/raw")
 	if err != nil {
 		return ""
@@ -846,12 +847,12 @@ func get_external() string {
 	content, err := ioutil.ReadAll(resp.Body)
 
 	if err != nil {
-		data =  GetIntranetIp()
+		data = GetIntranetIp()
 	}
 	//buf := new(bytes.Buffer)
 	//buf.ReadFrom(resp.Body)
 	//s := buf.String()
-	data =strings.Replace(string(content), ".", "-", -1)
+	data = strings.Replace(string(content), ".", "-", -1)
 	data = strings.Replace(data, ":", "-", -1)
 	return data
 }
