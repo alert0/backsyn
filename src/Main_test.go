@@ -1,17 +1,17 @@
 package main
 
 import (
+	"logger"
 	"testing"
-	"log"
 )
 
 func Test_compress7zip(t *testing.T) {
 
-	err := compress7zip("D:/3/DLLLIB","d:/aaa.7z")
+	err := compress7zip("D:/3/DLLLIB", "d:/aaa.7z")
 
-	if(err !=nil) {
+	if err != nil {
 
-		log.Fatal("压缩错误")
+		logger.Info("压缩错误")
 	}
 
 	//if !IsPalindrome("detartrated") {

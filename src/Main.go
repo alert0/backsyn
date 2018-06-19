@@ -3,10 +3,8 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io"
 	"io/ioutil"
-	"log"
 	"math/rand"
 	"net"
 	"net/http"
@@ -16,8 +14,9 @@ import (
 	"strings"
 	"text/template"
 	"time"
-
 	"github.com/jlaffaye/ftp"
+	"logger"
+	"fmt"
 )
 
 var backFilePath string = "back.json"
@@ -62,18 +61,18 @@ func main() {
 
 	//dir2 , err2 := getCurrentDirectory()
 	//if err2 != nil {
-	//	log.Println("获取当前目录失败" + err2.Error() )
+	//	logger.Println("获取当前目录失败" + err2.Error() )
 	//
 	//}
 
 	//
-	//log.Println("文件目录： " + dir2 )
+	//logger.Println("文件目录： " + dir2 )
 
 	//
 
 	info, err := readBackInfoContent()
 	if err != nil {
-		log.Println("读取配置文件错误文件内容错误： " + err.Error())
+		logger.Println("读取配置文件错误文件内容错误： " + err.Error())
 
 	}
 
@@ -83,17 +82,22 @@ func main() {
 		initbak(info)
 	}
 
-	cmd := os.Args[1]
+	if len(os.Args) > 1 {
+		cmd := os.Args[1]
 
-	log.Println("cmd " + cmd)
+		logger.Println("cmd " + cmd)
 
-	switch cmd {
-	case "o":
-		BakOracleBat(info.OracleBakPath)
-	case "f":
-		BakFiles(info)
-	default:
-		//log.Println("删除指纹文件错误文件内容错误： " + err.Error())
+		switch cmd {
+		case "o":
+			BakOracleBat(info.OracleBakPath)
+		case "f":
+			BakFiles(info)
+		default:
+			//logger.Println("删除指纹文件错误文件内容错误： " + err.Error())
+			BakOracleBat(info.OracleBakPath)
+			BakFiles(info)
+		}
+	} else {
 		BakOracleBat(info.OracleBakPath)
 		BakFiles(info)
 	}
@@ -110,12 +114,12 @@ func initHashfile() error {
 	if 1 == t.Day() { //第一天
 		err := os.Remove(hashFileName) //删除文件test.txt
 		if err != nil {
-			log.Println("删除指纹文件错误文件内容错误： " + err.Error())
+			logger.Println("删除指纹文件错误文件内容错误： " + err.Error())
 		}
 	}
 
 	//if err := createHashFile(); err != nil {
-	//	log.Println("读取指纹文件错误文件内容错误： " + err.Error())
+	//	logger.Println("读取指纹文件错误文件内容错误： " + err.Error())
 	//	return err
 	//}
 
@@ -128,16 +132,16 @@ func initbak(info Backinfo) error {
 
 	var err = TemplateSaveFile(ORACLEBAKSQLPATHTL, ORACLEBAKSQLPATH, OracleBakPath)
 	if err != nil {
-		log.Println("生成oracledir.sql 失败" + err.Error())
+		logger.Println("生成oracledir.sql 失败" + err.Error())
 	}
 
 	dir, err1 := getCurrentDirectory()
 
 	if err1 != nil {
-		log.Println("获取当前目录失败" + err1.Error())
+		logger.Println("获取当前目录失败" + err1.Error())
 	}
 
-	//fmt.Println("ssssssssssss" + dir)
+	//logger.Println("ssssssssssss" + dir)
 
 	oracledir := map[string]string{
 		"Dir":           dir,
@@ -146,14 +150,14 @@ func initbak(info Backinfo) error {
 
 	err = TemplateSaveFile(ORACLEBAKPATHTL, ORACLEBAKPATH, oracledir)
 	if err != nil {
-		log.Println("生成oracledir.bat 失败" + err.Error())
+		logger.Println("生成oracledir.bat 失败" + err.Error())
 	}
 
 	var oracledatatmp []string = strings.Split(info.OracleURL, "@")
 
 	if oracledatatmp == nil || len(oracledatatmp) < 2 {
 
-		log.Println("读取oracle配置信息失败")
+		logger.Println("读取oracle配置信息失败")
 
 	}
 
@@ -166,12 +170,12 @@ func initbak(info Backinfo) error {
 
 	err = TemplateSaveFile(ORACLEBAKBATPATHTL, ORACLEBAKBATPATH, oracleddata)
 	if err != nil {
-		log.Println("生成oracle.bat 失败" + err.Error())
+		logger.Println("生成oracle.bat 失败" + err.Error())
 	}
 
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	baktime := fmt.Sprintf("0%d:%d%d", r.Intn(6), r.Intn(5), r.Intn(9))
-	log.Println(baktime)
+	logger.Println(baktime)
 
 	schtasks := map[string]string{
 		"dir":  dir,
@@ -180,18 +184,18 @@ func initbak(info Backinfo) error {
 
 	err = TemplateSaveFile(SCHTASKSPATHTL, SCHTASKSPATH, schtasks)
 	if err != nil {
-		log.Println("生成schtasks.bat 失败" + err.Error())
+		logger.Println("生成schtasks.bat 失败" + err.Error())
 	}
 
 	err = TemplateSaveFile(STARTPATHTL, STARTPATH, dir)
 	if err != nil {
-		log.Println("生成start.bat 失败" + err.Error())
+		logger.Println("生成start.bat 失败" + err.Error())
 	}
 
 	err = execu(SCHTASKSPATH)
 
 	if err != nil {
-		log.Println("运行schtasks.bat 失败" + err.Error())
+		logger.Println("运行schtasks.bat 失败" + err.Error())
 		return err
 	}
 
@@ -204,21 +208,21 @@ func BakOracleBat(oraclepath string) error {
 
 	dir, err := getCurrentDirectory()
 	if err != nil {
-		log.Println("获取当前目录失败" + err.Error())
+		logger.Println("获取当前目录失败" + err.Error())
 		return err
 	}
 
 	if !checkFileIsExist(filepath.Join(dir, oraclepath)) {
 		err := execu(ORACLEBAKPATH)
 		if err != nil {
-			log.Println("运行文件失败" + ORACLEBAKPATH + err.Error())
+			logger.Println("运行文件失败" + ORACLEBAKPATH + err.Error())
 			return err
 		}
 	}
 
 	err = execu(ORACLEBAKBATPATH)
 	if err != nil {
-		log.Println("运行文件失败" + ORACLEBAKBATPATH + err.Error())
+		logger.Println("运行文件失败" + ORACLEBAKBATPATH + err.Error())
 		return err
 	}
 
@@ -235,18 +239,18 @@ func BakFiles(info Backinfo) error {
 
 	if !checkFileIsExist(hashFileName) {
 		if err := createHashFile(); err != nil {
-			log.Println("读取指纹文件错误文件内容错误： " + err.Error())
+			logger.Println("读取指纹文件错误文件内容错误： " + err.Error())
 			//return err
 		}
 		xcplasttime = "01-02-2006"
 	}
 
 	if err := tarpath(info, lasttime, xcplasttime); err != nil {
-		log.Println("复制文件失败" + err.Error())
+		logger.Println("复制文件失败" + err.Error())
 	}
 
 	if err := zipfiles(info.TargetPath, lasttime); err != nil {
-		log.Println("压缩文件失败" + err.Error())
+		logger.Println("压缩文件失败" + err.Error())
 	}
 
 	var remoteSavePath = lastmoth + "^" + strings.Replace(get_external(), ".", "-", -1)
@@ -257,7 +261,7 @@ func BakFiles(info Backinfo) error {
 		if file.IsDir() {
 			continue
 		} else {
-			fmt.Println(file.Name())
+			logger.Println(file.Name())
 			ftpUploadFile(info.FtpIp, info.FtpUserName, info.FtpPassWord, filepath.Join(info.TargetPath, file.Name()), remoteSavePath, oracledatatmp[0]+file.Name())
 		}
 	}
@@ -268,12 +272,12 @@ func BakFiles(info Backinfo) error {
 	//
 
 	//
-	//log.Println("压缩文件", remoteSavePath, lasttime+".7z")
+	//logger.Println("压缩文件", remoteSavePath, lasttime+".7z")
 	//
 	//var err = ftpUploadFile(info.FtpIp, info.FtpUserName, info.FtpPassWord, localFile, remoteSavePath, lasttime+oracledatatmp[0]+".7z")
 	//
 	//if err != nil {
-	//	log.Println("上传ftp文件失败" + err.Error())
+	//	logger.Println("上传ftp文件失败" + err.Error())
 	//	//ftpUploadFile(info.FtpIp, info.FtpUserName, info.FtpPassWord, localFile, remoteSavePath, lasttime+oracledatatmp[0]+".7z")
 	//}
 
@@ -290,29 +294,29 @@ func readBackInfoContent() (Backinfo, error) {
 	file, err := os.Open(backFilePath)
 
 	if err != nil {
-		log.Println("读取指纹文件内容错误： " + err.Error())
+		logger.Println("读取指纹文件内容错误： " + err.Error())
 	}
 
 	defer func() {
 		err := file.Close()
 		if err != nil {
-			log.Println("close指纹文件 " + backFilePath + " 失败： " + err.Error())
+			logger.Println("close指纹文件 " + backFilePath + " 失败： " + err.Error())
 		}
 	}()
 
 	jsonContent, err := ioutil.ReadAll(file)
 
 	if err != nil {
-		log.Println("读取指纹文件内容错误： " + err.Error())
+		logger.Println("读取指纹文件内容错误： " + err.Error())
 	}
 	//content := make(&backinfo)
 	var backinfo Backinfo
 	err = json.Unmarshal(jsonContent, &backinfo)
 	if err != nil {
-		log.Println("指纹文件 json Unmarshal 失败： " + err.Error())
+		logger.Println("指纹文件 json Unmarshal 失败： " + err.Error())
 	}
 
-	fmt.Println(backinfo.BackPath[0])
+	logger.Println(backinfo.BackPath[0])
 
 	return backinfo, err
 
@@ -323,7 +327,7 @@ func readBackInfoContent() (Backinfo, error) {
 func createHashFile() error {
 	defer func() {
 		if err_p := recover(); err_p != nil {
-			fmt.Println("createHashFile模块出错")
+			logger.Println("createHashFile模块出错")
 		}
 	}()
 
@@ -333,7 +337,7 @@ func createHashFile() error {
 
 		err := ioutil.WriteFile(hashFilePath, []byte("{}"), 0777)
 		if err != nil {
-			log.Println("创建指纹文件失败： " + err.Error())
+			logger.Println("创建指纹文件失败： " + err.Error())
 			return err
 		}
 	}
@@ -413,7 +417,7 @@ func tarpath(backinfo Backinfo, lasttime, time string) error {
 		if err != nil {
 			return err
 		}
-		log.Println("执行xcopy： " + value + backinfo.TargetPath + "/" + lasttime + "/")
+		logger.Println("执行xcopy： " + value + backinfo.TargetPath + "/" + lasttime + "/")
 		//var partPath, _ = filepath.Rel(value, path)
 		//
 		//var targetPath = filepath.Join(backinfo.TargetPath, time, partPath)
@@ -439,7 +443,7 @@ func tarpath(backinfo Backinfo, lasttime, time string) error {
 	//var hashFilePath = filepath.Join(hashFileName)
 	//err = writeFileContent(hashMapContent, hashFilePath)
 	//if err != nil {
-	//	log.Println("写入指纹文件失败" + err.Error())
+	//	logger.Println("写入指纹文件失败" + err.Error())
 	//return err
 	//
 	//}
@@ -477,13 +481,13 @@ func zipfiles(targetPath string, time string) error {
 //func copyFile(basePath, targetPath string) {
 //	defer func() {
 //		if err_p := recover(); err_p != nil {
-//			fmt.Println("copyFile模块出错")
+//			logger.Println("copyFile模块出错")
 //		}
 //	}()
 //
 //	baseStat, err := os.Stat(basePath)
 //	if err != nil {
-//		log.Panicln("需要备份的文件检测失败，文件出现问题，无法复制")
+//		logger.Panicln("需要备份的文件检测失败，文件出现问题，无法复制")
 //		return
 //	}
 //	//targetStat, err := os.Stat(targetPath)
@@ -495,7 +499,7 @@ func zipfiles(targetPath string, time string) error {
 //				//如果缺失的是一个空目录
 //				errMkDir := os.MkdirAll(targetPath, 0777)
 //				if errMkDir != nil {
-//					log.Println("创建目录 " + targetPath + " 失败")
+//					logger.Println("创建目录 " + targetPath + " 失败")
 //				}
 //			} else {
 //				//如果缺失的是一个文件,则复制文件
@@ -520,44 +524,44 @@ func zipfiles(targetPath string, time string) error {
 //func copyFileContent(basePath, targetPath string) {
 //	defer func() {
 //		if err := recover(); err != nil {
-//			fmt.Println("copyFileContent模块出错")
+//			logger.Println("copyFileContent模块出错")
 //		}
 //	}()
 //
 //	baseFile, err := os.Open(basePath)
 //	if err != nil {
-//		log.Println("读取文件 " + basePath + " 失败")
+//		logger.Println("读取文件 " + basePath + " 失败")
 //		return
 //	}
 //	defer func() {
 //		err := baseFile.Close()
 //		if err != nil {
-//			log.Println("close文件 " + basePath + " 失败： " + err.Error())
+//			logger.Println("close文件 " + basePath + " 失败： " + err.Error())
 //		}
 //	}()
 //	targetFile, err := os.Create(targetPath)
 //	if err != nil {
-//		log.Println("创建文件 " + targetPath + " 失败： " + err.Error())
+//		logger.Println("创建文件 " + targetPath + " 失败： " + err.Error())
 //		return
 //	}
 //	defer func() {
 //		err := targetFile.Close()
 //		if err != nil {
-//			log.Println("close文件 " + targetPath + " 失败： " + err.Error())
+//			logger.Println("close文件 " + targetPath + " 失败： " + err.Error())
 //		}
 //	}()
 //	copyData, err := io.Copy(targetFile, baseFile)
 //	if err != nil {
-//		log.Println("复制文件文件 " + basePath + " 失败： " + err.Error())
+//		logger.Println("复制文件文件 " + basePath + " 失败： " + err.Error())
 //	}
-//	fmt.Println("正在复制文件： " + basePath + " 大小为： " + strconv.FormatInt(copyData, 10))
+//	logger.Println("正在复制文件： " + basePath + " 大小为： " + strconv.FormatInt(copyData, 10))
 //}
 //
 ////读取整个指纹文件到内存
 //func readFileContent() (*map[string]uint32, error) {
 //	defer func() {
 //		if err := recover(); err != nil {
-//			log.Println("readFileContent模块出错")
+//			logger.Println("readFileContent模块出错")
 //		}
 //	}()
 //	var hashFilePath = filepath.Join(hashFileName)
@@ -565,25 +569,25 @@ func zipfiles(targetPath string, time string) error {
 //	file, err := os.Open(hashFilePath)
 //
 //	if err != nil {
-//		log.Println("读取指纹文件内容错误： " + err.Error())
+//		logger.Println("读取指纹文件内容错误： " + err.Error())
 //	}
 //
 //	defer func() {
 //		err := file.Close()
 //		if err != nil {
-//			log.Println("close指纹文件 " + hashFilePath + " 失败： " + err.Error())
+//			logger.Println("close指纹文件 " + hashFilePath + " 失败： " + err.Error())
 //		}
 //	}()
 //
 //	jsonContent, err := ioutil.ReadAll(file)
 //
 //	if err != nil {
-//		log.Println("读取指纹文件内容错误： " + err.Error())
+//		logger.Println("读取指纹文件内容错误： " + err.Error())
 //	}
 //	content := make(map[string]uint32)
 //	err = json.Unmarshal(jsonContent, &content)
 //	if err != nil {
-//		log.Println("指纹文件 json Unmarshal 失败： " + err.Error())
+//		logger.Println("指纹文件 json Unmarshal 失败： " + err.Error())
 //	}
 //	return &content, err
 //}
@@ -593,7 +597,7 @@ func zipfiles(targetPath string, time string) error {
 //
 //	defer func() {
 //		if err_p := recover(); err_p != nil {
-//			fmt.Println("makeFileMd5模块出错")
+//			logger.Println("makeFileMd5模块出错")
 //		}
 //	}()
 //
@@ -601,14 +605,14 @@ func zipfiles(targetPath string, time string) error {
 //
 //	if err != nil {
 //
-//		log.Println("makefilemd5读取文件失败： " + err.Error())
+//		logger.Println("makefilemd5读取文件失败： " + err.Error())
 //
 //		//return 0
 //		//_, ok := err.(*os.PathError)
 //		//if ok {
-//		//	log.Println("指纹文件 json Unmarshal 失败： " + err.Error())
+//		//	logger.Println("指纹文件 json Unmarshal 失败： " + err.Error())
 //		//} else {
-//		//	log.Println("指纹文件 json Unmarshal 失败： " + err.Error())
+//		//	logger.Println("指纹文件 json Unmarshal 失败： " + err.Error())
 //		//}
 //	}
 //
@@ -619,7 +623,7 @@ func zipfiles(targetPath string, time string) error {
 //func comparedFileMd5(mapContent *map[string]uint32, md5 uint32, path string) bool {
 //	defer func() {
 //		if err := recover(); err != nil {
-//			log.Println("comparedFileMd5模块出错")
+//			logger.Println("comparedFileMd5模块出错")
 //		}
 //	}()
 //
@@ -642,19 +646,19 @@ func zipfiles(targetPath string, time string) error {
 //func writeFileContent(mapContent *map[string]uint32, path string) error {
 //	defer func() {
 //		if err := recover(); err != nil {
-//			log.Println("writeFileContent模块出错")
+//			logger.Println("writeFileContent模块出错")
 //		}
 //	}()
 //
 //	jsonContent, err := json.Marshal(*mapContent)
 //
 //	if err != nil {
-//		log.Println("指纹文件 json Marshal 失败： " + err.Error())
+//		logger.Println("指纹文件 json Marshal 失败： " + err.Error())
 //		return err
 //	}
 //	err = ioutil.WriteFile(path, jsonContent, 0777)
 //	if err != nil {
-//		log.Println("写入指纹文件失败： " + err.Error())
+//		logger.Println("写入指纹文件失败： " + err.Error())
 //		return err
 //	}
 //	return nil
@@ -669,11 +673,11 @@ func compress7zip(frm, dst string) error {
 	cmd.Stdout = &out
 	err := cmd.Run()
 	if err != nil {
-		log.Println("执行7zip压缩命令错误： " + err.Error())
-		//log.Fatal(err)
+		logger.Println("执行7zip压缩命令错误： " + err.Error())
+		//logger.Fatal(err)
 		return err
 	}
-	fmt.Printf("in all caps: %q\n", out.String())
+	logger.Println("in all caps: %q\n", out.String())
 	return nil
 }
 
@@ -689,11 +693,11 @@ func xcopy(frm, dst, time string) error {
 	//cmd.Stdout = &out
 	err := cmd.Run()
 	if err != nil {
-		log.Println("执行xcopy压缩命令错误： " + err.Error())
-		//log.Fatal(err)
+		logger.Println("执行xcopy压缩命令错误： " + err.Error())
+		//logger.Fatal(err)
 		return err
 	}
-	//fmt.Printf("in all caps: %q\n", out.String())
+	//logger.Printf("in all caps: %q\n", out.String())
 	return nil
 }
 
@@ -701,7 +705,7 @@ func execu(name string) error {
 
 	dir, err := getCurrentDirectory()
 	if err != nil {
-		log.Println("获取当前目录失败" + err.Error())
+		logger.Println("获取当前目录失败" + err.Error())
 		return err
 	}
 
@@ -712,10 +716,10 @@ func execu(name string) error {
 	cmd.Stderr = &stderr
 	err = cmd.Run()
 	if err != nil {
-		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
+		logger.Println(err.Error() + ": " + stderr.String())
 		return err
 	}
-	//fmt.Println("Result: " + out.String())
+	//logger.Println("Result: " + out.String())
 	return nil
 }
 
@@ -777,12 +781,12 @@ func execu(name string) error {
 func ftpUploadFile(ftpserver, ftpuser, pw, localFile, remoteSavePath, saveName string) error {
 	ftp, err := ftp.Connect(ftpserver)
 	if err != nil {
-		fmt.Println(err)
+		logger.Println(err)
 		return nil
 	}
 	err = ftp.Login(ftpuser, pw)
 	if err != nil {
-		fmt.Println(err)
+		logger.Println(err)
 		return nil
 	}
 
@@ -790,17 +794,17 @@ func ftpUploadFile(ftpserver, ftpuser, pw, localFile, remoteSavePath, saveName s
 	//err = ftp.Delete(remoteSavePath +"/"+ saveName)
 	//
 	//if err != nil {
-	//	fmt.Println("删除文件失败")
+	//	logger.Println("删除文件失败")
 	//}
 
 	err = ftp.ChangeDir(remoteSavePath)
 	if err != nil {
-		fmt.Println(err)
+		logger.Println(err)
 
 		//return  nil
 		err = ftp.MakeDir(remoteSavePath)
 		if err != nil {
-			fmt.Println(err)
+			logger.Println(err)
 			return nil
 		}
 
@@ -809,22 +813,22 @@ func ftpUploadFile(ftpserver, ftpuser, pw, localFile, remoteSavePath, saveName s
 
 	dir, err := ftp.CurrentDir()
 	if err != nil {
-		fmt.Println(err)
+		logger.Println(err)
 		return nil
 	}
 
-	fmt.Println(dir)
+	logger.Println(dir)
 
 	file, err := os.Open(localFile)
 	if err != nil {
-		fmt.Println(err)
+		logger.Println(err)
 	}
 
 	defer file.Close()
 	err = ftp.Stor(saveName, file)
 	if err != nil {
 		//ftp.Delete(saveName)
-		fmt.Println(err)
+		logger.Println(err)
 		return err
 	}
 
@@ -832,7 +836,7 @@ func ftpUploadFile(ftpserver, ftpuser, pw, localFile, remoteSavePath, saveName s
 
 	ftp.Quit()
 
-	log.Println("success upload file:", localFile)
+	logger.Println("success upload file:", localFile)
 
 	return err
 }
@@ -861,7 +865,7 @@ func GetIntranetIp() string {
 	addrs, err := net.InterfaceAddrs()
 
 	if err != nil {
-		fmt.Println(err)
+		logger.Println(err)
 	}
 
 	for _, address := range addrs {
@@ -871,7 +875,7 @@ func GetIntranetIp() string {
 			if ipnet.IP.To4() != nil {
 
 				return ipnet.IP.String()
-				//fmt.Println("ip:", ipnet.IP.String())
+				//logger.Println("ip:", ipnet.IP.String())
 			}
 
 		}
@@ -892,21 +896,21 @@ func TemplateSaveFile(tlpath, savepath string, datas interface{}) error {
 	tmpl, err := TemplateInit(tlpath)
 
 	if err != nil {
-		log.Println("加载模板：" + tlpath + err.Error())
+		logger.Println("加载模板：" + tlpath + err.Error())
 		return err
 	}
 
 	data, err := TemplateExecute(tmpl, datas)
 
 	if err != nil {
-		log.Println("生成模板：" + tlpath + err.Error())
+		logger.Println("生成模板：" + tlpath + err.Error())
 		return err
 	}
 
 	f, err := os.Create(savepath) //创建文件
 
 	if err != nil {
-		log.Println("打开：" + savepath + err.Error())
+		logger.Println("打开：" + savepath + err.Error())
 		return err
 	}
 
@@ -914,10 +918,10 @@ func TemplateSaveFile(tlpath, savepath string, datas interface{}) error {
 
 	n, err := io.WriteString(f, data) //写入文件(字符串)
 
-	fmt.Printf("写入 %d 个字节n", n)
+	logger.Println("写入 %d 个字节n", n)
 
 	if err != nil {
-		log.Println("生成：" + savepath + err.Error())
+		logger.Println("生成：" + savepath + err.Error())
 		return err
 	}
 
@@ -934,7 +938,7 @@ func TemplateInit(templatePath string) (*template.Template, error) {
 
 	tmpl, err := template.New("test").Parse(string(content))
 	if err != nil {
-		fmt.Printf("file error: %v", err)
+		logger.Println("file error: %v", err)
 		return nil, err
 	}
 	return tmpl, nil
@@ -944,7 +948,7 @@ func TemplateExecute(tmpl *template.Template, data interface{}) (string, error) 
 	buf := new(bytes.Buffer)
 	err := tmpl.Execute(buf, data)
 	if err != nil {
-		fmt.Printf("tmplate error: %v", err)
+		logger.Println("tmplate error: %v", err)
 		return "", err
 	}
 	return buf.String(), nil
