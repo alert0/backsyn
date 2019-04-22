@@ -1,9 +1,10 @@
 {
   "TargetPath":"d:/filebak",
-  "BackPath":["F:/web/backsyn"],
-  "FtpIp" : "www.xxx.com:1414",
+  "BackPath":["D:/xampp/htdocs","D:/oraclebak"],
+  "FtpIp" : "2.xxx.com:1414",
   "FtpUserName": "back",
-  "FtpPassWord": "xxx",
-  "OracleBakPath": "d:/oraclebak",
-  "OracleURL": "newhzt@xxx@orcl"
+  "FtpPassWord": "22",
+  "OracleBakPath": "D:/oraclebak",
+  "OracleURL": "c##dyydhzt@@ORCL",
+  "BackFileName":"baksx"
 }

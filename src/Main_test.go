@@ -1,8 +1,9 @@
 package main
 
 import (
-	"logger"
 	"testing"
+
+	"github.com/alert0/backsyn/logger"
 )
 
 func Test_compress7zip(t *testing.T) {

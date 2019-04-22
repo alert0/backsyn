@@ -21,3 +21,23 @@ Everything is Ok
 
 2018/06/08 14:05:11 2018-06-08.7z.001
 2018/06/08 14:05:32 dial tcp 174.37.175.229:1414: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2019/04/22 09:58:15 D:/xampp/htdocs
+2019/04/22 09:58:15 打开：bat/backdir.sqlopen bat/backdir.sql: The system cannot find the path specified.
+2019/04/22 09:58:15 生成oracledir.sql 失败open bat/backdir.sql: The system cannot find the path specified.
+2019/04/22 09:58:15 打开：bat/backdir.batopen bat/backdir.bat: The system cannot find the path specified.
+2019/04/22 09:58:15 生成oracledir.bat 失败open bat/backdir.bat: The system cannot find the path specified.
+2019/04/22 09:58:15 打开：bat/oracle.batopen bat/oracle.bat: The system cannot find the path specified.
+2019/04/22 09:58:15 生成oracle.bat 失败open bat/oracle.bat: The system cannot find the path specified.
+2019/04/22 09:58:15 05:34
+2019/04/22 09:58:15 打开：bat/schtasks.batopen bat/schtasks.bat: The system cannot find the path specified.
+2019/04/22 09:58:15 生成schtasks.bat 失败open bat/schtasks.bat: The system cannot find the path specified.
+2019/04/22 09:58:15 打开：bat/start.batopen bat/start.bat: The system cannot find the path specified.
+2019/04/22 09:58:15 生成start.bat 失败open bat/start.bat: The system cannot find the path specified.
+2019/04/22 09:58:15 exit status 1: ϵͳ�Ҳ���ָ����·����
+
+2019/04/22 09:58:15 运行schtasks.bat 失败exit status 1
+2019/04/22 09:58:15 cmd f
+2019/04/22 09:58:16 执行xcopy： D:/xampp/htdocsd:/filebak/2019-04-22/
+2019/04/22 09:58:16 执行xcopy： D:/oraclebakd:/filebak/2019-04-22/
+2019/04/22 09:58:16 执行7zip压缩命令错误： exec: "7z/7z.exe": file does not exist
+2019/04/22 09:58:16 压缩文件失败exec: "7z/7z.exe": file does not exist

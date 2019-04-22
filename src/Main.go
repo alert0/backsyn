@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
 	"io/ioutil"
 	"math/rand"
@@ -14,9 +15,9 @@ import (
 	"strings"
 	"text/template"
 	"time"
+
+	"github.com/alert0/backsyn/logger"
 	"github.com/jlaffaye/ftp"
-	"logger"
-	"fmt"
 )
 
 var backFilePath string = "back.json"
@@ -55,6 +56,7 @@ type Backinfo struct {
 	FtpPassWord   string
 	OracleBakPath string
 	OracleURL     string
+	BackFileName  string
 }
 
 func main() {
@@ -253,7 +255,7 @@ func BakFiles(info Backinfo) error {
 		logger.Println("压缩文件失败" + err.Error())
 	}
 
-	var remoteSavePath = lastmoth + "^" + strings.Replace(get_external(), ".", "-", -1)
+	var remoteSavePath = lastmoth + "^" + strings.Replace(get_external(info.BackFileName), ".", "-", -1)
 	var oracledatatmp []string = strings.Split(info.OracleURL, "@")
 
 	files, _ := ioutil.ReadDir(info.TargetPath)
@@ -677,7 +679,7 @@ func compress7zip(frm, dst string) error {
 		//logger.Fatal(err)
 		return err
 	}
-	logger.Println("in all caps: %q\n", out.String())
+	logger.Println("in all caps: %s\n", out.String())
 	return nil
 }
 
@@ -841,8 +843,13 @@ func ftpUploadFile(ftpserver, ftpuser, pw, localFile, remoteSavePath, saveName s
 	return err
 }
 
-func get_external() string {
-	data := ""
+func get_external(FileName string) string {
+	data := FileName
+
+	if data != "" {
+		return data
+	}
+
 	resp, err := http.Get("http://myexternalip.com/raw")
 	if err != nil {
 		return ""
