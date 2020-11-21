@@ -1,0 +1,36 @@
+@echo off
+
+
+forfiles /p {{.OracleBakPath}} /m *.dmp -d -3  /C "cmd /c del /f @path\"
+
+forfiles /p {{.OracleBakPath}} /m *.7z -d -3  /C "cmd /c del /f @path\"
+
+set BACKUP_DIR={{.OracleBakPath}}
+
+rem delete 30days files
+
+rem rd /s /Q %BACKUP_DIR%
+
+md %BACKUP_DIR%
+
+cd %BACKUP_DIR%
+
+rem backup schemas
+
+set ORACLE_USERNAME={{.UserName}}
+set ORACLE_PASSWORD={{.PassWord}}
+set ORACLE_DB={{.DBName}}
+set BACK_OPTION="SCHEMAS={{.UserName}}"
+set backupfile=%ORACLE_USERNAME%_%date:~0,4%-%date:~5,2%-%date:~8,2%.dmp
+set backupfilezip=%ORACLE_USERNAME%_%date:~0,4%-%date:~5,2%-%date:~8,2%.7z
+//expdp %ORACLE_USERNAME%/%ORACLE_PASSWORD%@%ORACLE_DB%  directory=bak  dumpfile=%backupfile%   logfile=%logfile%  schemas=%ORACLE_USERNAME%
+
+{{.Path}}  -h{{.Ip}} -P{{.Port}} -u{{.UserName}} -p{{.PassWord}} --default-character-set=utf8  --databases  {{.DBName}} > {{.OracleBakPath}}\"%backupfile%"   
+
+{{.Dir}}\7z\7z.exe a  {{.OracleBakPath}}\%backupfilezip%  {{.OracleBakPath}}\%backupfile% 
+
+
+del /f   {{.OracleBakPath}}\%backupfile% 
+
+
+exit

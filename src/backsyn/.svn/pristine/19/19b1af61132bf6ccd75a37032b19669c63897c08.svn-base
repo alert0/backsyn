@@ -1,0 +1,20 @@
+@echo off
+
+
+set BACKUP_DIR={{.OracleBakPath}}
+
+rem delete 30days files
+
+
+md %BACKUP_DIR%
+
+cd %BACKUP_DIR%
+
+
+
+set backupfile=%date:~0,4%-%date:~5,2%-%date:~8,2%.dmp
+set logfile=%date:~0,4%-%date:~5,2%-%date:~8,2%.log
+expdp %ORACLE_USERNAME%/%ORACLE_PASSWORD%@%ORACLE_DB%  directory=bak  dumpfile=%backupfile%   logfile=%logfile%  schemas=%ORACLE_USERNAME%
+
+
+exit

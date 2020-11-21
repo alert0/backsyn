@@ -1,0 +1,10 @@
+{
+  "TargetPath":"d:\\filebak",
+  "BackPath":["D:\\oa\\WEB-INF","D:\\oraclebak"],
+  "FtpIp" : "www.zxmoa.com:1414",
+  "FtpUserName": "back",
+  "FtpPassWord": "qwerty123",
+  "OracleBakPath": "D:\\oraclebak",
+  "OracleURL": "root@qwerty123@ab_demo@D:/devtool/mysql-8.0.20-winx64/bin/mysqldump.exe@192.168.16.124@3306",
+  "BackFileName":"测试"
+}

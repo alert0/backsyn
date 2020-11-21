@@ -1,0 +1,10 @@
+{
+  "TargetPath":"D:\\filebak",
+  "BackPath":["D:\\newhztfiles"],
+  "FtpIp" : "www.zxmoa.com:1414",
+  "FtpUserName": "back",
+  "FtpPassWord": "qwerty123",
+  "OracleBakPath": "D:\\oraclebak",
+  "OracleURL": "D:\Program Files\mysql-5.7.16-winx64\mysql-5.7.16-winx64\bin\mysqldump  -uroot -pqwerty123!@# --default-character-set=utf8  --databases  gsqyzyx > %backupfile% ", 
+  "BackFileName":"镇原河长制"
+}

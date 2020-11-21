@@ -1,0 +1,10 @@
+{
+  "TargetPath":"D:\\filebak",
+  "BackPath":["D:\\newhztfiles"],
+  "FtpIp" : "234",
+  "FtpUserName": "back",
+  "FtpPassWord": "",
+  "OracleBakPath": "D:\\oraclebak",
+  "OracleURL": "mysqldump  -uroot -p --default-character-set=utf8  --databases  gsqyzyx > %backupfile% ", 
+  "BackFileName":"test"
+}

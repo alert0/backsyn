@@ -1,0 +1,1270 @@
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 13:52:36
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 1 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 13:52:36
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 13:53:51
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (1)
+TotalTime  = 0.0 sec
+TransRate  = 0.06 MiB/s
+FileRate   = 66.7 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 13:53:51
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 13:54:44
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 1 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 13:54:44
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 13:57:21
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.94 MiB/s
+FileRate   = 1,000 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 13:57:21
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 13:57:43
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 1 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 13:57:43
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 13:58:00
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 1 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 13:58:00
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:02:27
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 1 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:02:27
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:03:38
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.06 MiB/s
+FileRate   = 62.5 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:03:38
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:05:15
+
+<Source>  D:\oa\WEB-INF
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:05:15
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:05:15
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.06 MiB/s
+FileRate   = 66.7 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:05:15
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:06:22
+
+<Source>  D:\oa\WEB-INF
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 2 (1)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 64.5 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:06:22
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:06:22
+
+<Source>  D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 1 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:06:22
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:16:15
+
+<Source>  D:\oa\WEB-INF,D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+FindFirstFileEx(文件名、目录名或卷标语法不正确。123) : D:\oa\WEB-INF,D:\oraclebak
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 1) at 2020/10/12 14:16:15
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:16:18
+
+<Source>  D:\oa\WEB-INF,D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+FindFirstFileEx(文件名、目录名或卷标语法不正确。123) : D:\oa\WEB-INF,D:\oraclebak
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 1) at 2020/10/12 14:16:18
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:16:33
+
+<Source>  D:\oa\WEB-INF,D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+FindFirstFileEx(文件名、目录名或卷标语法不正确。123) : D:\oa\WEB-INF,D:\oraclebak
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 1) at 2020/10/12 14:16:33
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:17:38
+
+<Source>  "D:\oa\WEB-INF D:\oraclebak"
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+FindFirstFileEx(文件名、目录名或卷标语法不正确。123) : D:\oa\WEB-INF D:\oraclebak
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 1) at 2020/10/12 14:17:38
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:17:41
+
+<Source>  "D:\oa\WEB-INF D:\oraclebak"
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+FindFirstFileEx(文件名、目录名或卷标语法不正确。123) : D:\oa\WEB-INF D:\oraclebak
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 1) at 2020/10/12 14:17:41
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:18:10
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 3 (3)
+TotalTime  = 0.1 sec
+TransRate  = 0.02 MiB/s
+FileRate   = 48.4 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:18:10
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:18:11
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 3 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:18:11
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:18:46
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak
+<DestDir> d:\filebak\temp\2020-10-12
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 3 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:18:46
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:41:28
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 3 (4)
+TotalTime  = 0.5 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 6.20 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:41:29
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:54:12
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 3 (3)
+TotalTime  = 0.0 sec
+TransRate  = 0.02 MiB/s
+FileRate   = 63.8 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:54:12
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 14:55:39
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 3 (3)
+TotalTime  = 0.0 sec
+TransRate  = 0.03 MiB/s
+FileRate   = 96.8 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 14:55:39
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:03:17
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (1)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 3 (0)
+TotalTime  = 0.1 sec
+TransRate  = 0.02 MiB/s
+FileRate   = 16.1 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:03:17
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:07:01
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 4 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:07:01
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:07:10
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 0 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 4 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.00 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:07:10
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:08:23
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 4 (4)
+TotalTime  = 0.1 sec
+TransRate  = 0.02 MiB/s
+FileRate   = 51.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:08:23
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:15:48
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (0)
+TotalSkip  = 0.0 MiB
+SkipFiles  = 3 (0)
+TotalTime  = 0.0 sec
+TransRate  = 0.03 MiB/s
+FileRate   = 32.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:15:48
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:18:14
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 4 (5)
+TotalTime  = 0.2 sec
+TransRate  = 0.01 MiB/s
+FileRate   = 17.0 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:18:14
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:33:54
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 4 (5)
+TotalTime  = 0.0 sec
+TransRate  = 0.04 MiB/s
+FileRate   = 85.1 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:33:54
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:34:53
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 4 (5)
+TotalTime  = 0.0 sec
+TransRate  = 0.04 MiB/s
+FileRate   = 85.1 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:34:53
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:42:44
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 4 (5)
+TotalTime  = 0.1 sec
+TransRate  = 0.03 MiB/s
+FileRate   = 64.5 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:42:44
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:43:14
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 4 (5)
+TotalTime  = 0.0 sec
+TransRate  = 0.06 MiB/s
+FileRate   = 125.0 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:43:14
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:44:33
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 4 (5)
+TotalTime  = 0.0 sec
+TransRate  = 0.06 MiB/s
+FileRate   = 129.0 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:44:33
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/12 15:49:20
+
+<Source>  D:\oa\WEB-INF; D:\oraclebak; d:\filebak\databack
+<DestDir> d:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 4 (5)
+TotalTime  = 0.0 sec
+TransRate  = 0.04 MiB/s
+FileRate   = 87.0 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/12 15:49:20
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/16 14:46:16
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.8 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.21 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/16 14:46:16
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/16 15:01:39
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 32.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/16 15:01:39
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/17 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 21.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/17 01:28:02
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/18 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.1 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 15.9 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/18 01:28:02
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/19 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 32.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/19 01:28:02
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/20 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 21.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/20 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/21 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 21.7 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/21 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/22 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.5 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.88 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/22 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/23 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.08 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/23 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/24 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.03 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/24 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/25 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.05 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/25 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/26 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.07 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/26 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/27 01:28:04
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.7 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.42 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/27 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/28 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.03 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/28 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/29 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.98 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/29 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/30 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 21.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/30 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/10/31 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.16 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/10/31 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/01 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.8 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.28 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/01 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/02 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.8 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.31 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/02 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/03 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.10 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/03 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/04 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.96 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/04 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/05 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.7 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.49 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/05 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/06 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 32.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/06 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/07 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.1 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.90 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/07 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/08 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.02 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/08 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/09 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.08 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/09 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/10 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.10 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/10 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/11 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.09 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/11 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/12 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.6 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.64 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/12 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/13 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.1 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 16.1 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/13 01:28:02
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/14 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.12 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/14 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/15 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.12 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/15 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/16 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 32.3 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/16 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/17 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.1 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.90 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/17 01:28:05
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/18 01:28:03
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.0 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.96 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/18 01:28:04
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/19 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.08 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/19 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/20 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 0.9 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 1.12 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/20 01:28:03
+
+=================================================
+FastCopy(ver3.92) start at 2020/11/21 01:28:02
+
+<Source>  D:\newhztfiles; D:\filebak\databack
+<DestDir> D:\filebak\temp
+<Command> Diff (Size/Date)
+-------------------------------------------------
+
+TotalRead  = 0.0 MiB
+TotalWrite = 0.0 MiB
+TotalFiles = 1 (2)
+TotalTime  = 1.1 sec
+TransRate  = 0.00 MiB/s
+FileRate   = 0.94 files/s
+
+Result : (ErrFiles : 0 / ErrDirs : 0) at 2020/11/21 01:28:03
+

@@ -1,0 +1,3 @@
+mkdir d:\filebak\databack
+sqlplus / as sysdba @E:\backsyn-master\src\bat\backdir.sql
+exit

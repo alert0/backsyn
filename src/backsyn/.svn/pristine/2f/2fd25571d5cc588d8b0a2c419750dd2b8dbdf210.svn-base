@@ -1,0 +1,3 @@
+create or replace directory bak as 'd:\filebak\databack';
+grant read,write on directory bak to public;
+exit

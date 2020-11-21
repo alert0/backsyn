@@ -1,0 +1,1 @@
+schtasks.exe /create /tn "bak11111{{.stname}}" /tr "{{.dir}}\bat\start.bat" /sc daily /st {{.time}} 

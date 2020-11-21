@@ -1,0 +1,36 @@
+@echo off
+
+
+forfiles /p d:\filebak\databack /m *.dmp -d -3  /C "cmd /c del /f @path\"
+
+forfiles /p d:\filebak\databack /m *.7z -d -3  /C "cmd /c del /f @path\"
+
+set BACKUP_DIR=d:\filebak\databack
+
+rem delete 30days files
+
+rem rd /s /Q %BACKUP_DIR%
+
+md %BACKUP_DIR%
+
+cd %BACKUP_DIR%
+
+rem backup schemas
+
+set ORACLE_USERNAME=root
+set ORACLE_PASSWORD=qwerty123
+set ORACLE_DB=ab_demo
+set BACK_OPTION="SCHEMAS=root"
+set backupfile=%ORACLE_USERNAME%_%date:~0,4%-%date:~5,2%-%date:~8,2%.dmp
+set backupfilezip=%ORACLE_USERNAME%_%date:~0,4%-%date:~5,2%-%date:~8,2%.7z
+//expdp %ORACLE_USERNAME%/%ORACLE_PASSWORD%@%ORACLE_DB%  directory=bak  dumpfile=%backupfile%   logfile=%logfile%  schemas=%ORACLE_USERNAME%
+
+D:/devtool/mysql-8.0.20-winx64/bin/mysqldump.exe  -h192.168.16.124 -P3306 -uroot -pqwerty123 --default-character-set=utf8  --databases  ab_demo > d:\filebak\databack\"%backupfile%"   
+
+E:\backsyn-master\src\7z\7z.exe a  d:\filebak\databack\%backupfilezip%  d:\filebak\databack\%backupfile% 
+
+
+del /f   d:\filebak\databack\%backupfile% 
+
+
+exit

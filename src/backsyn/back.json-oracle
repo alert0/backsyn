@@ -1,0 +1,10 @@
+{
+  "TargetPath":"D:\\filebak",
+  "BackPath":["D:\\newhztfiles"],
+  "FtpIp" : "www.zxmoa.com:1414",
+  "FtpUserName": "back",
+  "FtpPassWord": "qwerty123",
+  "OracleBakPath": "D:\\oraclebak",
+  "OracleURL": "expdp newhzt/Scls!@#123@orcl  directory=bak  dumpfile=%backupfile%   logfile=%logfile%  schemas=newhzt ", 
+  "BackFileName":"四川凉山州"
+}

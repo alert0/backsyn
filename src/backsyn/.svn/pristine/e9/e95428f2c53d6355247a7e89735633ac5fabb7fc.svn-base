@@ -1,0 +1,6 @@
+E:\backsyn-master\src\FastCopy\FastCopy.exe /cmd=diff  /auto_close  /force_close  /from_date="-1D"  D:\oa\WEB-INF D:\oraclebak d:\filebak\databack /to="d:\filebak\temp" 
+
+set backupfilezip=%date:~0,4%-%date:~5,2%-%date:~8,2%.7z
+
+E:\backsyn-master\src\7z\7z.exe a -mx=1 -v5g   d:\filebak\temp\%backupfilezip%  d:\filebak\temp 
+
